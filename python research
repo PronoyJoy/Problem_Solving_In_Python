@@ -1,0 +1,27 @@
+empty_list =[]
+def add_to_cart(empty_list):
+
+    want_to_buy = input('Do you want to add items?:')
+
+    empty_list = []
+    while(want_to_buy == 'yes'):
+        
+        product_name = input('Enter the product name:')
+        price = input(f'Enter the unit price of {product_name}:')
+        number_of_products = input(f'How many of {product_name} did you buy?:')
+
+        product_history = {'product_name':product_name,'price':price,'number_of_products':number_of_products}
+        empty_list.append(product_history)
+        product_history={}
+        want_to_buy = input('Do you want to add more items?:')
+        if want_to_buy == 'no':
+            break
+
+    print(empty_list)
+
+
+add_to_cart(empty_list)
+
+
+
+
